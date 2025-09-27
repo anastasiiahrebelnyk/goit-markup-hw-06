@@ -58,10 +58,9 @@ img {
 }
 
 .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 320px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .header {
@@ -234,18 +233,24 @@ h1 {
 
 
 .values-section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
-.values-item {
-    width: calc((100% - 3 * 24px) / 4);
+.values-item { 
+width: 100%;
+    
 }
 
 .values-list {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+    min-width: 288px;
+    max-width: 100vh;
+    margin-right: 16px;
+    margin-left: 16px;
 }
+
 
 .values-icon {
     border: solid 1px #8E8F99;
@@ -264,16 +269,16 @@ h1 {
         line-height: 1.2;
         letter-spacing: 0.02em;
         font-weight: 500;
-       
+
 }
 
-.values-subtitle {
-    font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        font-weight: medium;
-        font-weight: 500;
-        margin-bottom: 8px;
+.values-subtitle {   
+    letter-spacing: 0.02em;
+    font-weight: medium;
+    font-weight: 700;
+    line-height: 1.11;
+    font-size: 36px;
+    margin-bottom: 8px;
     
 }
 
@@ -295,9 +300,11 @@ h1 {
 
 .values-text {
     line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
-    
+    letter-spacing: 0.02em;
+    color: #434455;
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 288px;
 }
 
 .team-section {
@@ -911,7 +918,10 @@ text-decoration: underline;
     pointer-events: auto;
 }
 
-@media (max-width: 321px) and (min-resolution: 2dppx) {
+
+/* ---------------MOBILE 2X--------------- */
+
+@media (max-width: 321px) and (min-resolution: 2x) {
     .hero-section {
         background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
@@ -921,6 +931,9 @@ text-decoration: underline;
     
 }
 
+
+/* -----------------TABLET------------------ */
+
 @media (min-width: 768px) {
     .hero-section {
     background-image: linear-gradient(to bottom,
@@ -929,16 +942,9 @@ text-decoration: underline;
     url(../images/hero-sectinon-img-tab-standart.jpg);
     }
 
-
-    @media (min-resolution: 2x) {
-        .hero-section {
-            background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), 
-                url(../images/hero-section-img-tab-2x.jpg);
-        }
+    .container {
+        max-width: 768px;
     }
-
 
     .hero-title {
     font-size: 56px;
@@ -946,13 +952,90 @@ text-decoration: underline;
     margin-bottom: 36px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 496px;
+    max-width: 736px;
+
+    }
+
+    .values-list {
+        min-width: 736px;
+        gap: 24px;
+        row-gap: 72px;
+    }
+
+    .values-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+/* ---------------------TABLET 2X------------------- */
+
+@media (min-width: 768px) and (min-resolution: 2x) {
+    .hero-section {
+    background-image: linear-gradient(to bottom,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/hero-section-img-tab-2x.jpg);
     }
 }
 
 
+/* ---------------DESKTOP------------------ */
+
 @media (min-width: 1140px) {
+    
     .hero-section {
     margin-bottom: 48px;
     }
+
+    .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1158px;
+    }
+
+    .values-section {
+    padding: 120px 0;
+    }
+
+    .values-item{
+    width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .values-list{
+    justify-content: space-between;
+    gap: 24px;
+    }
+
+    .values-subtitle{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    }
+
+    .values-item::before {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        width: 100%;
+        height: 112px;
+        border: 1px solid #2e2f42;
+        border-radius: 4px;
+        background-color: #F4F4FD;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 8px;
+    }
+
+    .values-item:nth-child(1)::before {
+        background-image: url("../images/values-section-svg-first.svg") ;
+    }
+
+    /* .values-item:nth-child(2)::before {
+        background-image: url("../images/icons.svg#icon-clock");
+    } */
+
+    
 }
+
+/* -----------------DESKTOP 2X--------------------- */
