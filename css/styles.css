@@ -309,13 +309,14 @@ width: 100%;
 
 .team-section {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-social-list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
     width: 100%;
@@ -366,9 +367,13 @@ width: 100%;
 
 .team-list {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    /* justify-content: space-between; */
+    /* gap: 24px; */
+    gap: 72px;
+    flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
+
     
 }
 
@@ -378,19 +383,22 @@ width: 100%;
         letter-spacing: 0.02em;
         text-align: center;
         text-transform: capitalize;
-        font-weight: 500;
-        margin-bottom: 72px;
+        /* font-weight: 500; */
+        font-weight: 700;
+        margin: 0 auto 72px;
 }
 
 .team-person {
     padding: 32px 0;
+    max-width: 264px;
+    width: 100%;
 }
 
 .team-subtitle {
     font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 8px;
        
@@ -398,34 +406,36 @@ width: 100%;
 
 .team-text {
     line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
-        text-align: center;
-        margin-bottom: 8px;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-item {
     background-color: #FFFFFF;
-    width: calc(((100% - 3*24px) / 4));
+    
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
-        width: 100%;
+        width: 100vh;
         height: 100%;
+        max-width: 264px;
 }
 
 .portfolio-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    row-gap: 48px;
-    
+    row-gap: 48px; 
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 
 .portfolio-title {
@@ -441,7 +451,7 @@ width: 100%;
 }
 
 .portfolio-list-item {
-    width: calc((100% - 2*24px) / 3);
+    max-width: 288px;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -935,18 +945,18 @@ text-decoration: underline;
 /* -----------------TABLET------------------ */
 
 @media (min-width: 768px) {
-    .hero-section {
+.hero-section {
     background-image: linear-gradient(to bottom,
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)), 
     url(../images/hero-sectinon-img-tab-standart.jpg);
     }
 
-    .container {
-        max-width: 768px;
+.container {
+    max-width: 768px;
     }
 
-    .hero-title {
+.hero-title {
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 36px;
@@ -956,15 +966,30 @@ text-decoration: underline;
 
     }
 
-    .values-list {
-        min-width: 736px;
-        gap: 24px;
-        row-gap: 72px;
+.values-list {
+    min-width: 736px;
+    gap: 24px;
+    row-gap: 72px;
     }
 
-    .values-item {
-        width: calc((100% - 24px) / 2);
+.values-item {
+    width: calc((100% - 24px) / 2);
     }
+
+.team-list {
+    gap: 24px;
+    row-gap: 64px;
+    
+}
+
+.team-item {
+    width: calc((100% - 24px) / 2);
+    
+}
+
+.portfolio-list {
+    gap: 24px;
+}
 }
 
 /* ---------------------TABLET 2X------------------- */
@@ -1004,12 +1029,17 @@ text-decoration: underline;
     .values-list{
     justify-content: space-between;
     gap: 24px;
+    margin: 0 auto;
     }
 
     .values-subtitle{
     font-size: 20px;
     line-height: 1.2;
     font-weight: 500;
+    }
+
+    .values-text {
+    font-weight: 400;
     }
 
     .values-item::before {
@@ -1035,7 +1065,27 @@ text-decoration: underline;
         background-image: url("../images/icons.svg#icon-clock");
     } */
 
+.team-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+        }
+
+
+.team-item {
+    width: calc(((100% - 3*24px) / 4));
+}
+
+.portfolio-list-item {
+    width: calc((100% - 2*24px) / 3);
+}
+
+.portfolio-list {
+    row-gap: 48px;
     
 }
+
+.portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 
 /* -----------------DESKTOP 2X--------------------- */
