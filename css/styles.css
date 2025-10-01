@@ -427,6 +427,8 @@ width: 100%;
 .portfolio-section {
     padding-top: 96px;
     padding-bottom: 96px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .portfolio-list {
@@ -530,26 +532,25 @@ width: 100%;
 .footer {
     background-color: #2e2f42;
     color: #F4F4FD;
-   padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 96px;
+    padding-top: 96px;
     
 
 }
 
 .footer-container{
-    display: flex;
-    align-items: baseline;
+    margin: 0 auto;
 }
 
 .footer-about {
-    max-width: 264px;
-    margin-right: 120px
+    max-width: 288px;
+    margin: 0 auto;
     
 }
 
 .logo-name-footer {
     color: #f4f4fd;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
 }
 
 .footer-text {
@@ -557,17 +558,23 @@ width: 100%;
     letter-spacing: 0.02em;
     color: #F4F4FD;
     max-width: 264px;
+    font-weight: 400;
+    margin-bottom: 72px;
 }
 
 .footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-    margin-right: 0;
+    display: block;
+    /* margin-right: 0; */
+    margin: 0 auto 16px auto;
+    text-align: center;
 }
 
 .footer-social-list {
     display: flex;
     gap: 16px;
+    margin-bottom: 72px;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -609,6 +616,8 @@ width: 100%;
     letter-spacing: 0.02em;
 color: #FFFFFF;
 margin-bottom: 16px;
+text-align: center;
+width: 100%;
 }
 
 .footer-svg {
@@ -622,9 +631,6 @@ margin-bottom: 16px;
 
 /* --------existing code-------- */
 
-.footer-input {
-    padding-left: 80px;
-}
 
 .footer-subscr-text {
     font-weight: 500;
@@ -633,14 +639,17 @@ margin-bottom: 16px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 
 .footer-input-and-button {
     display: flex;
-    gap: 24px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
+    
 }
 
 .footer-email {
@@ -658,6 +667,7 @@ margin-bottom: 16px;
     line-height: 2;
     letter-spacing: 0.04em;
     outline: transparent;
+    margin-bottom: 16px;
 
 }
 
@@ -682,6 +692,7 @@ margin-bottom: 16px;
         min-width: 165px;
         height: 40px;
         cursor: pointer;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -990,8 +1001,43 @@ text-decoration: underline;
 .portfolio-list {
     gap: 24px;
 }
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
+.footer-about {
+    max-width: 264px;
+    margin-left: 108px;
+    margin-right: 24px;
+    margin-bottom: 72px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+
+}
+
+.footer-social-title {
+    text-align: start;
+}
+
+.footer-input {
+    margin-left: 108px;
+}
+
+.footer-subscr-text{
+    text-align: start;
+}
+
+.footer-input-and-button {
+    gap: 24px;
+    align-items: flex-start;
+    }
+}
 /* ---------------------TABLET 2X------------------- */
 
 @media (min-width: 768px) and (min-resolution: 2x) {
@@ -1087,5 +1133,39 @@ text-decoration: underline;
 .portfolio-section {
     padding-top: 120px;
     padding-bottom: 120px;
+}
 
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.footer-about {
+    max-width: 264px;
+    margin-right: 120px;
+}
+
+.footer-input-and-button {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.footer-input {
+    margin-left: 80px;
+}
+
+.footer-subscr-text{
+
+
+}
+
+}
 /* -----------------DESKTOP 2X--------------------- */
