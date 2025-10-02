@@ -203,6 +203,8 @@ background-color: #404BBF;
     flex-direction: column;
     justify-content: space-between;
     z-index: 999;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .menu-close-btn {
