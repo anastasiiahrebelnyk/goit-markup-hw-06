@@ -1107,6 +1107,22 @@ text-decoration: underline;
     max-width: 768px;
     }
 
+.list-box {
+    display: flex;
+}
+
+.address {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.menu-open-btn {
+    display: none;
+}
+
 .hero-title {
     font-size: 56px;
     line-height: 1.07;
